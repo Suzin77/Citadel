@@ -25,6 +25,7 @@ require 'application/config/config.php';
 require 'application/libs/application.php';
 require 'application/libs/controller.php';
 require 'application/libs/model.php';
-
+require 'application/models/monsterModel.php';
+require 'application/models/GameTables.php';
 // start the application
 $app = new Application();

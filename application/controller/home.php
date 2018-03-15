@@ -19,6 +19,10 @@ class Home extends Controller
 
         $die = $this->loadModel('dieModel');
         $grid = $die -> randomGrid(1,2);
+        $monsterExample = new MonsterStats('Dire Wolf');
+
+        $trap = GameTables::getTraps();
+        //$trapsCount = GameTables::count();
 
         require 'application/views/_templates/header.php';
         require 'application/views/home/index.php';

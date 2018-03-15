@@ -34,6 +34,19 @@
 			}
 		}
 	}		
-	?>    
+	?> 
+	<p><?php if(isset($monsterExample)){
+		echo "name: ".$monsterExample->name."</br>";
+		echo "RV: ".$monsterExample->rv."</br>";
+		echo "nv: ".$monsterExample->nv."</br>";
+	}; ?></p>
+	<p>
+	<?php 
+	foreach($trap as $key => $value){
+		echo "nr: ".($key+1)." to ".$value."</br>";
+	}
+
+	?>	
+	</p> 
 
 </div>
