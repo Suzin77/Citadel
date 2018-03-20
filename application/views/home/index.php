@@ -46,6 +46,10 @@
 		echo "nr: ".($key+1)." to ".$value."</br>";
 	}
 
+	//var_export($encounter);
+	echo "You encounter: </br> ";
+	echo "- ".$encounter["qty"]." x ".$encounter["name"];
+
 	?>	
 	</p> 
 
