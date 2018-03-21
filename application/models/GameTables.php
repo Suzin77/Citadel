@@ -70,10 +70,6 @@ class GameTables
 		return $result;
 	}
 
-	static function getResult($table, $result=array()){
-
-	}
-
 	static function roll($count=1){
 		for($n=1;$n<=$count;$n++){
 			if(rand(1,6)== 6){

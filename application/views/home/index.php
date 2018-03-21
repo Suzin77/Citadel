@@ -39,6 +39,10 @@
 		echo "name: ".$monsterExample->name."</br>";
 		echo "RV: ".$monsterExample->rv."</br>";
 		echo "nv: ".$monsterExample->nv."</br>";
+		echo "CB: ".$monsterExample->cb."</br>";
+		echo "HP: ".$monsterExample->hp."</br>";
+		echo "treasure: ".$monsterExample->treasure."</br>";
+		
 	}; ?></p>
 	<p>
 	<?php 

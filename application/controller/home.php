@@ -24,6 +24,7 @@ class Home extends Controller
         $trap = GameTables::getTraps();
         $jewel = GameTables::setJewels();
         $encounter = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
+        
         //$trapsCount = GameTables::count();
 
         require 'application/views/_templates/header.php';
