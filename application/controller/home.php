@@ -24,11 +24,16 @@ class Home extends Controller
         $trap = GameTables::getTraps();
         $jewel = GameTables::setJewels();
         $encounter = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
+
+        $en = new Encounter();
         
         //$trapsCount = GameTables::count();
 
+        //$stats = classLoader::readDir("application/models/");
+
         require 'application/views/_templates/header.php';
         require 'application/views/home/index.php';
+        require 'application/views/_templates/debug.php';
         require 'application/views/_templates/footer.php';
     } 
 

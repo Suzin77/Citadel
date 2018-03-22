@@ -53,8 +53,15 @@
 	//var_export($encounter);
 	echo "You encounter: </br> ";
 	echo "- ".$encounter["qty"]." x ".$encounter["name"];
+	echo "<p>Nowe spotaknie to ".$en->amount." x ".$en->monsterName."</p>";
 
+	foreach($en->enemy as $datakey => $value){
+
+		//echo "<p> - ".$datakey." to ".$value."</p>\n"; 
+	}
+	var_dump($en);
 	?>	
 	</p> 
+
 
 </div>
