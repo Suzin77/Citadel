@@ -41,6 +41,16 @@ a: hover {
     font-weight: bold;
 }
 
+.monster{
+  border:2px solid #000;
+  padding: 2px 4px;
+}
+
+.monster > h6{
+  text-align: center;
+  color: green;
+}
+
 /*buttons */
 /*
 .btn{

@@ -11,11 +11,9 @@
 class Home extends Controller
 {
     /**
-     * PAGE: index
-     * This method handles what happens when you move to http://yourproject/home/index (which is the default page btw)
      */
     public function index()
-    {
+    {   
 
         $die = $this->loadModel('dieModel');
         $grid = $die -> randomGrid(1,2);
@@ -23,9 +21,9 @@ class Home extends Controller
 
         $trap = GameTables::getTraps();
         $jewel = GameTables::setJewels();
-        $encounter = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
+        //$encounter = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
 
-        $en = new Encounter();
+        $encounter = new Encounter();
         
         //$trapsCount = GameTables::count();
 

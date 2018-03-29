@@ -1,7 +1,10 @@
 <?php
 class Encounter
 {
-
+    /*
+    Encounter class
+    Obiekst posiada informację o potworach w spotkaniu.
+    */
 	function __construct()
 	{
 		$monsters = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
@@ -21,10 +24,12 @@ class Encounter
 	public function enemy($enemy=array())
 	{
 		for($i=1;$i<=($this-> amount);$i++){
-			$enemy[$this->monsterName.$i] = new MonsterStats($this->monsterName);
+			$enemy["monster".$i] = new MonsterStats($this->monsterName);
 		}
 		return $enemy;
 	}
+
+
 }
 
 ?>

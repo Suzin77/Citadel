@@ -46,5 +46,17 @@ class Model
 	        }
 	    }
     }
+
+    public function arrayIterator($array, $indent="-")
+    {
+        foreach ($array as $key => $value){
+            if (is_array($value)){
+                echo $indent." ".$key."</br>";
+                $this -> arrayIterator($value);
+            } else {
+                echo $value."</br>";
+            }
+        }
+    }
 }    
 ?>

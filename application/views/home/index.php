@@ -51,17 +51,46 @@
 	}
 
 	//var_export($encounter);
-	echo "You encounter: </br> ";
-	echo "- ".$encounter["qty"]." x ".$encounter["name"];
-	echo "<p>Nowe spotaknie to ".$en->amount." x ".$en->monsterName."</p>";
+	//echo "You encounter: </br> ";
+	//echo "- ".$encounter["qty"]." x ".$encounter["name"];
+	//echo "<p>Nowe spotaknie to ".$en->amount." x ".$en->monsterName."</p>";
 
-	foreach($en->enemy as $datakey => $value){
 
-		//echo "<p> - ".$datakey." to ".$value."</p>\n"; 
-	}
-	var_dump($en);
+    //$die->arrayIterator($en);
+	//var_export($en);
+    echo "<pre>".var_export($encounter,true)."</pre>";
+    echo "<pre>".var_export($encounter->enemy['monster1']->hp,true)."</pre>";
 	?>	
 	</p> 
+
+    <?php 
+    $monsterDiv="";
+    for($i=1;$i<=$encounter->amount;$i++){
+        
+    }
+
+    foreach ($encounter->enemy as $monster=>$value){
+        echo "Potwór ".$monster." o watości: ".$value->hp."</br>";
+    }
+    ?>
+
+    <div>
+        <p>
+            <?php
+                echo $encounter->monsterName." x ".$encounter->amount."</br>";
+                
+             ?>
+        </p>
+    </div>
+
+    <div class = "monster">
+        <h6><?php echo $encounter->monsterName ?></h6>
+        <p>HP 5</p>
+        <p>Atak</p>
+        <p>Combat Bonus</p>
+        <p>Treasure type: <?php echo $encounter->enemy['monster1']->treasure ?></p>
+
+    </div>
 
 
 </div>

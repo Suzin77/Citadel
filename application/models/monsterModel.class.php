@@ -39,7 +39,7 @@ class MonsterStats extends monsterModel
 	 */ 
 	function getMonster($name)
 	{
-		$monsterStats = array('Chim'      => array('RV'=>2, 'NV' =>7, 'CB'=>7, 'HP'=>(rand(1,6)+rand(1,6)+2), 'Weapon'=> 0, 'Spells' => 0, 'Treasure'=> 'i','Special'=>'Firebreath'),
+		$monsterStats = array('Chimaera'      => array('RV'=>2, 'NV' =>7, 'CB'=>7, 'HP'=>(rand(1,6)+rand(1,6)+2), 'Weapon'=> 0, 'Spells' => 0, 'Treasure'=> 'i','Special'=>'Firebreath'),
                               'Cronk'     => array('RV'=>1, 'NV' =>9,'CB'=>4, 'HP'=>(rand(1,6)+1), 'Weapon'=> 0, 'Spells' => 0, 'Treasure'=> 'e/b','Special'=>'Stench'),
                               'Demon'     => array('RV'=>4, 'NV' =>'none', 'CB'=>4, 'HP'=>(rand(1,6)+2), 'Weapon'=> 0, 'Spells' => 0, 'Treasure'=> 'd','Special'=>'see 16.0'),
                               'Dire Wolf' => array('RV'=>1, 'NV' =>9, 'CB'=>1, 'HP'=>(rand(1,3)+1), 'Weapon'=> 0, 'Spells' => 0, 'Treasure'=> 'a','Special'=>0),
