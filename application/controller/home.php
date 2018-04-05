@@ -32,6 +32,7 @@ class Home extends Controller
         require 'application/views/_templates/header.php';
         require 'application/views/home/index.php';
         require 'application/views/_templates/debug.php';
+        require 'application/views/_templates/temp.php';
         require 'application/views/_templates/footer.php';
     } 
 
