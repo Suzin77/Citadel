@@ -1,12 +1,6 @@
 <div class="container">
 	<p>jestem view of index</p>
 	<h2>Co juz mamy</h2>
-    <span> 
-	    <button type="button"><a href="<?php echo URL . 'admin/updateUser/' . $exampleToCheck[0]['steam_id']; ?>">aktualizuj</a>
-	    </button>
-    </span>	
-       
-    </p>
     <p><button type="button"><a href="<?php echo URL . 'admin/updateMany/40'; ?>">aktualizuj 10 na raz</a>
 	    </button></p>
 
@@ -82,7 +76,9 @@
              ?>
         </p>
     </div>
-
+    <?php
+        require 'application/views/_templates/encounter.php';
+     ?>
     <div class = "monster">
         <h6><?php echo $encounter->monsterName ?></h6>
         <p>HP 5</p>

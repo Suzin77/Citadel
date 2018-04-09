@@ -1,13 +1,14 @@
-
+<?php
+/*
 <div class = "monster">
 <p class = "name">Monster name</p>
-<p>HP:<span class = "currenthp">100</span>/<span class = "max hp">100</span></p>
+<p>HP:<span class = "currenthp">100</span>/<span class = "maxhp">100</span></p>
 <p>Resistance Value:<span class ="resistance Value">6</span>
 <ul>
-<il class = "trust">trust</il>
-<il>bash</il>
-<il>trzy</il>
-<il>cztery</il>
+<li class = "trust">trust</li>
+<li>bash</li>
+<li>trzy</li>
+<li>cztery</li>
 </ul>
 </div>
 <div id="banner-message">
@@ -16,7 +17,7 @@
 </div>
 
 <script>
-var list = $("il");
+var list = $("li");
 var banner = $("#banner-message")
 var button = $("button")
 var trust = $(".trust");
@@ -24,7 +25,8 @@ var currHp = $(".currenthp");
 /*trust.on("click",function(){  
   currHp.text("4");
 });
-*/
+
+
 list.on("click",function(){
     var damage =  Math.floor((Math.random() * 10) + 1)
     var  hp = currHp.text();
@@ -41,3 +43,5 @@ button.on("click", function(){
   banner.toggleClass("alt")
 })
 </script>
+*/
+?>
