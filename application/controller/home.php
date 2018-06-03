@@ -15,8 +15,8 @@ class Home extends Controller
     public function index()
     {   
 
-        $die = $this->loadModel('dieModel');
-        $grid = $die -> randomGrid(1,2);
+        //$die = $this->loadModel('dieModel');
+        $grid = DieModel::randomGrid(1,2);
         $monsterExample = new MonsterStats('Dire Wolf');
 
         $trap = GameTables::getTraps();

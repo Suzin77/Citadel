@@ -1,4 +1,6 @@
 <?php
+//namespace application
+
 class GameTables
 {
 	static function setTrap(){

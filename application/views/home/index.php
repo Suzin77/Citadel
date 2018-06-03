@@ -64,8 +64,14 @@
     }
 
     foreach ($encounter->enemy as $monster=>$value){
-        echo "Potwór ".$monster." o watości: ".$value->hp."</br>";
+        echo "Potwór ".$monster." o imieniu".$value->getStat('name')."</br>".
+             " HP: ".$value->getStat('hp')."</br>".
+             "Skarb: ".$value->getStat('treasure')." o wartości : ".$value->getStat('gold')." monet złota</br>";
+             foreach($value->getStat('jewels') as $jewel =>$jewelValue){
+                echo " Kamyk wartości: ".$jewelValue; 
+             }
     }
+    echo "Metoda get stats to : ".$encounter->enemy["monster1"]->getStat('name');
     ?>
 
     <div>
