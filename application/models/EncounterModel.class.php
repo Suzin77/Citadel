@@ -1,4 +1,5 @@
 <?php
+namespace Encounter;
 class Encounter
 {
     /*
@@ -7,13 +8,14 @@ class Encounter
     */
 	function __construct()
 	{
-		$monsters = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
+		$monsters = \GameTables\GameTables::roomMonsterTable(rand(1,6),rand(1,6));
 
 		$this-> monsters = $monsters;
 		$this-> monsterName = $monsters['name'];
 		//$this-> monsterData = new MonsterStats($this->monsterName);
 		$this-> amount = $monsters['qty'];
 		$this-> enemy = $this->enemy();
+		
 
 	}
 
@@ -24,10 +26,12 @@ class Encounter
 	public function enemy($enemy=array())
 	{
 		for($i=1;$i<=($this-> amount);$i++){
-			$enemy["monster".$i] = new MonsterStats($this->monsterName);
+			$enemy["monster".$i] = new \MonsterStats\MonsterStats($this->monsterName);
 		}
 		return $enemy;
 	}
+
+
 
 
 }

@@ -26,7 +26,6 @@
         <ul>
             <!-- same like "home" or "home/index" -->
             <li class = "btn btn-default""><a href="<?php echo URL; ?>">home</a></li>
-            <li class = "btn btn-default""><a href="<?php echo URL; ?>home/exampleone">exampleone</a></li>
             <li class = "btn btn-default""><a href="<?php echo URL; ?>admin/index">Admin</a></li>
             <li class = "btn btn-default""><a href ="<?php echo URL; ?>data/search">Search in DB</a></li>
             <li class = "btn btn-default""><a href ="<?php echo URL; ?>steamAPI/search">Search by API</a></li>

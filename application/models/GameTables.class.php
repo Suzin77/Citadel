@@ -1,5 +1,5 @@
 <?php
-//namespace application
+namespace GameTables;
 
 class GameTables
 {

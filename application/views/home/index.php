@@ -35,7 +35,7 @@
 		echo "nv: ".$monsterExample->nv."</br>";
 		echo "CB: ".$monsterExample->cb."</br>";
 		echo "HP: ".$monsterExample->hp."</br>";
-		echo "treasure: ".$monsterExample->treasure."</br>";
+		echo "treasure: ".$monsterExample->treasureType."</br>";
 		
 	}; ?></p>
 	<p>
@@ -66,7 +66,7 @@
     foreach ($encounter->enemy as $monster=>$value){
         echo "Potwór ".$monster." o imieniu".$value->getStat('name')."</br>".
              " HP: ".$value->getStat('hp')."</br>".
-             "Skarb: ".$value->getStat('treasure')." o wartości : ".$value->getStat('gold')." monet złota</br>";
+             "Skarb: ".$value->getStat('treasureType')." o wartości : ".$value->getStat('gold')." monet złota</br>";
              foreach($value->getStat('jewels') as $jewel =>$jewelValue){
                 echo " Kamyk wartości: ".$jewelValue; 
              }
@@ -90,7 +90,7 @@
         <p>HP 5</p>
         <p>Atak</p>
         <p>Combat Bonus</p>
-        <p>Treasure type: <?php echo $encounter->enemy['monster1']->treasure ?></p>
+        <p>Treasure type: <?php echo $encounter->enemy['monster1']->treasureType ?></p>
 
     </div>
 

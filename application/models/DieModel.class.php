@@ -1,4 +1,5 @@
 <?php
+namespace Dices;
 class DieModel
 {	
 	static function roll($sides)

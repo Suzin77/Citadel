@@ -1,4 +1,6 @@
 <?php
+namespace Treasure;
+use \Dices\dieModel as dieModel;
 /*
 Klasa odpowiedzialna za generowanie skarbów oraz wyliczanie wartości skarbów.
 
@@ -69,7 +71,7 @@ class Treasure
         $jewels = array(2=>1,3=>5,4=>10,5=>15,6=>20,7=>25,8=>35,9=>50,10=>75,11=>100,12=>150);       
         $result = array();
         for($i=1;$i<=$jewelsCount;$i++){
-            $result[]=$jewels[dieModel::manyRoll(6,2)];
+            $result[]=$jewels[\Dices\dieModel::manyRoll(6,2)];
         }
         return $result;
     }

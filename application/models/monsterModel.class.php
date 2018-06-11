@@ -1,4 +1,5 @@
 <?php
+namespace MonsterStats;
 class monsterModel
 {	
 	
@@ -20,12 +21,12 @@ class MonsterStats extends monsterModel
 		$this-> cb = $stats['CB'];
 		$this-> hp = $stats['HP'];
 		$this-> weapon = $stats['Weapon'];
-		$this-> treasure =  substr($stats['Treasure'],0,1);
+		$this-> treasureType =  substr($stats['Treasure'],0,1);
 		$this-> spells = $stats['Spells'];
 		$this-> special = $stats['Special'];
-        $this-> skarb = new Treasure($this->treasure);
-        $this-> gold = $this->skarb->gold;
-        $this-> jewels = $this->skarb->jewelsWorth;
+        $this-> treasure = new \Treasure\Treasure($this->treasureType);
+        $this-> gold = $this->treasure->gold;
+        $this-> jewels = $this->treasure->jewelsWorth;
 
 	}
 
@@ -44,6 +45,11 @@ class MonsterStats extends monsterModel
     function getStat($statName)
     {
         return $this -> $statName;
+    }
+
+    function setStat($statname, $value)
+    {
+        return $this ->"$statname" = $value;
     }
 
 

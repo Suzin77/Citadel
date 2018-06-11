@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Class Home
  *
@@ -16,14 +15,14 @@ class Home extends Controller
     {   
 
         //$die = $this->loadModel('dieModel');
-        $grid = DieModel::randomGrid(1,2);
-        $monsterExample = new MonsterStats('Dire Wolf');
+        $grid = \Dices\DieModel::randomGrid(1,2);
+        $monsterExample = new \MonsterStats\MonsterStats('Dire Wolf');
 
-        $trap = GameTables::getTraps();
-        $jewel = GameTables::setJewels();
+        $trap = \GameTables\GameTables::getTraps();
+        $jewel = \GameTables\GameTables::setJewels();
         //$encounter = GameTables::roomMonsterTable(rand(1,6),rand(1,6));
 
-        $encounter = new Encounter();
+        $encounter = new \Encounter\Encounter();
         
         //$trapsCount = GameTables::count();
 
